@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>টাকা আয় করুন - বিজ্ঞাপন দেখুন</title>
-    <script src='//libtl.com/sdk.js' data-zone='10146538' data-sdk='show_10146538'></script>
+    <script src='//libtl.com/sdk.js' data-zone='10190779' data-sdk='show_10190779'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         :root {
@@ -35,7 +35,7 @@
             display: flex;
             flex-direction: column;
             padding: 15px;
-            padding-bottom: 70px; /* নেভিগেশন বারের জন্য স্থান */
+            padding-bottom: 70px;
         }
         
         .container {
@@ -404,7 +404,6 @@
             animation: coinAnimation 1s forwards;
         }
         
-        /* নেভিগেশন বার স্টাইল */
         .bottom-nav {
             position: fixed;
             bottom: 0;
@@ -446,7 +445,6 @@
             color: var(--primary-color);
         }
         
-        /* পেজ সেকশন স্টাইল */
         .page-section {
             display: none;
         }
@@ -455,7 +453,6 @@
             display: block;
         }
         
-        /* বিজ্ঞাপন কন্টেইনার স্টাইল */
         .ad-container {
             margin: 15px;
             display: flex;
@@ -467,7 +464,6 @@
             overflow: hidden;
         }
         
-        /* পপআপ মডেল স্টাইল */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -592,7 +588,6 @@
     </style>
 </head>
 <body>
-    <!-- পপআপ মডেল -->
     <div id="telegramModal" class="modal-overlay" style="display: none;">
         <div class="modal-content">
             <h2><i class="fas fa-exclamation-triangle"></i> গুরুত্বপূর্ণ নোটিশ</h2>
@@ -614,23 +609,21 @@
             <div class="badge">সক্রিয়</div>
         </div>
         
-        <!-- হেডার এর নিচে প্রথম বিজ্ঞাপন -->
         <div class="ad-container">
             <center>
                 <script type="text/javascript">
                     atOptions = {
-                        'key' : 'af3ac5da264d48edf05886e0c3d572c2',
+                        'key' : '65ca3537481cdbb4d1fbea426b067ed5',
                         'format' : 'iframe',
                         'height' : 50,
                         'width' : 320,
                         'params' : {}
                     };
                 </script>
-                <script type="text/javascript" src="//www.highperformanceformat.com/af3ac5da264d48edf05886e0c3d572c2/invoke.js"></script>
+                <script type="text/javascript" src="//intimidatingsideway.com/65ca3537481cdbb4d1fbea426b067ed5/invoke.js"></script>
             </center>
         </div>
         
-        <!-- হোম পেজ -->
         <div class="page-section active" id="home-page">
             <div class="user-card">
                 <div class="user-avatar" id="user-avatar">U</div>
@@ -642,26 +635,26 @@
             
             <div class="stats-container">
                 <div class="stat-card">
-                    <h3>দেখা বিজ্ঞাপন</h3>
-                    <p id="watched-ads">0</p>
+                    <h3>পয়সা ব্যালেন্স</h3>
+                    <p id="earned-paisa">0 <small>পয়সা</small></p>
                 </div>
                 <div class="stat-card">
-                    <h3>আয়কৃত টাকা</h3>
+                    <h3>টাকা ব্যালেন্স</h3>
                     <p id="earned-money">0.00 <small>টাকা</small></p>
                 </div>
             </div>
             
             <div class="progress-container">
                 <div class="progress-header">
-                    <h3>আজকের অগ্রগতি</h3>
-                    <span id="ads-progress">0/500</span>
+                    <h3>উত্তোলন অগ্রগতি</h3>
+                    <span id="ads-progress">0/800</span>
                 </div>
                 <div class="progress-bar">
                     <div class="progress-fill" id="progress-fill"></div>
                 </div>
                 <div class="progress-text">
                     <span>0 টাকা</span>
-                    <span>500 টাকা</span>
+                    <span>800 টাকা</span>
                 </div>
             </div>
             
@@ -669,7 +662,6 @@
                 <i class="fas fa-check-circle"></i> বিজ্ঞাপন দেখতে প্রস্তুত
             </div>
             
-            <!-- দৈনিক সীমা বিভাগ -->
             <div class="daily-limit" id="daily-limit" style="display: none;">
                 <h3><i class="fas fa-exclamation-triangle"></i> দৈনিক সীমা পূর্ণ!</h3>
                 <p>আপনি আজ ৫০০টি বিজ্ঞাপন দেখেছেন। আবার দেখতে নিচের টাইমার শেষ হওয়ার জন্য অপেক্ষা করুন:</p>
@@ -679,7 +671,7 @@
             
             <div class="action-buttons">
                 <button class="btn btn-primary" id="watch-ad-btn" onclick="watchAd()">
-                    <i class="fas fa-play"></i> বিজ্ঞাপন দেখুন (২ টাকা)
+                    <i class="fas fa-play"></i> বিজ্ঞাপন দেখুন (৫০ পয়সা)
                 </button>
                 <button class="btn btn-success" id="auto-ad-btn" onclick="startAutoAds()">
                     <i class="fas fa-robot"></i> স্বয়ংক্রিয় বিজ্ঞাপন
@@ -692,19 +684,18 @@
                 </button>
             </div>
             
-            <!-- পৃষ্ঠার মাঝখানে দ্বিতীয় বিজ্ঞাপন -->
             <div class="ad-container">
                 <center>
                     <script type="text/javascript">
                         atOptions = {
-                            'key' : 'af3ac5da264d48edf05886e0c3d572c2',
+                            'key' : '65ca3537481cdbb4d1fbea426b067ed5',
                             'format' : 'iframe',
                             'height' : 50,
                             'width' : 320,
                             'params' : {}
                         };
                     </script>
-                    <script type="text/javascript" src="//www.highperformanceformat.com/af3ac5da264d48edf05886e0c3d572c2/invoke.js"></script>
+                    <script type="text/javascript" src="//intimidatingsideway.com/65ca3537481cdbb4d1fbea426b067ed5/invoke.js"></script>
                 </center>
             </div>
             
@@ -727,20 +718,19 @@
             </div>
             
             <div class="rate-info">
-                <p><i class="fas fa-ad"></i> প্রতি বিজ্ঞাপন = ২ টাকা</p>
-                <p><i class="fas fa-money-bill-wave"></i> ন্যূনতম উত্তোলন: ৫০০ টাকা</p>
+                <p><i class="fas fa-ad"></i> প্রতি বিজ্ঞাপন = ৫০ পয়সা</p>
+                <p><i class="fas fa-money-bill-wave"></i> ন্যূনতম উত্তোলন: ৮০০ টাকা</p>
                 <p><i class="fas fa-gift"></i> রেফারেল বোনাস: ১০ টাকা প্রতি ব্যবহারকারী</p>
                 <p><i class="fas fa-clock"></i> দৈনিক সীমা: ৫০০ বিজ্ঞাপন</p>
             </div>
         </div>
         
-        <!-- আর্ন পেজ -->
         <div class="page-section" id="earn-page">
             <h3 class="section-title"><i class="fas fa-coins"></i> টাকা আয় করার উপায়</h3>
             
             <div class="action-buttons">
                 <button class="btn btn-primary" id="watch-ad-btn-earn" onclick="watchAd()">
-                    <i class="fas fa-play"></i> বিজ্ঞাপন দেখুন (২ টাকা)
+                    <i class="fas fa-play"></i> বিজ্ঞাপন দেখুন (৫০ পয়সা)
                 </button>
                 <button class="btn btn-success" id="auto-ad-btn-earn" onclick="startAutoAds()">
                     <i class="fas fa-robot"></i> স্বয়ংক্রিয় বিজ্ঞাপন
@@ -769,13 +759,12 @@
             </div>
             
             <div class="rate-info">
-                <p><i class="fas fa-ad"></i> প্রতি বিজ্ঞাপন = ২ টাকা</p>
+                <p><i class="fas fa-ad"></i> প্রতি বিজ্ঞাপন = ৫০ পয়সা</p>
                 <p><i class="fas fa-gift"></i> রেফারেল বোনাস: ১০ টাকা প্রতি ব্যবহারকারী</p>
                 <p><i class="fas fa-clock"></i> দৈনিক সীমা: ৫০০ বিজ্ঞাপন</p>
             </div>
         </div>
         
-        <!-- উত্তোলন পেজ -->
         <div class="page-section" id="withdraw-page">
             <h3 class="section-title"><i class="fas fa-wallet"></i> টাকা উত্তোলন</h3>
             
@@ -787,7 +776,7 @@
             <div class="withdraw-section" id="withdraw-section">
                 <div class="form-group">
                     <label for="withdraw-amount">পরিমাণ (টাকা)</label>
-                    <input type="number" id="withdraw-amount" class="form-control" placeholder="টাকার পরিমাণ লিখুন" min="500">
+                    <input type="number" id="withdraw-amount" class="form-control" placeholder="টাকার পরিমাণ লিখুন" min="800">
                 </div>
                 <div class="form-group">
                     <label for="payment-method">পেমেন্ট মাধ্যম</label>
@@ -809,12 +798,11 @@
             </div>
             
             <div class="rate-info">
-                <p><i class="fas fa-money-bill-wave"></i> ন্যূনতম উত্তোলন: ৫০০ টাকা</p>
+                <p><i class="fas fa-money-bill-wave"></i> ন্যূনতম উত্তোলন: ৮০০ টাকা</p>
                 <p><i class="fas fa-clock"></i> উত্তোলন প্রসেসিং সময়: ২৪-৪৮ ঘন্টা</p>
             </div>
         </div>
         
-        <!-- নোটিশ পেজ -->
         <div class="page-section" id="notice-page">
             <h3 class="section-title"><i class="fas fa-bell"></i> নোটিশ ও আপডেট</h3>
             
@@ -833,7 +821,7 @@
                 
                 <div class="stat-card">
                     <h3><i class="fas fa-exclamation-triangle"></i> গুরুত্বপূর্ণ নোটিশ</h3>
-                    <p>উত্তোলনের জন্য ন্যূনতম ৫০০ টাকা প্রয়োজন। দয়া করে উত্তোলন করার আগে নিশ্চিত হয়ে নিন।</p>
+                    <p>উত্তোলনের জন্য ন্যূনতম ৮০০ টাকা প্রয়োজন। দয়া করে উত্তোলন করার আগে নিশ্চিত হয়ে নিন।</p>
                     <small>১ সপ্তাহ আগে</small>
                 </div>
                 
@@ -850,7 +838,6 @@
         </div>
     </div>
 
-    <!-- নেভিগেশন বার -->
     <div class="bottom-nav">
         <a href="#" class="nav-item active" onclick="showPage('home-page', this)">
             <i class="fas fa-home"></i>
@@ -877,19 +864,20 @@
 
     <script>
         // Constants
-        const POINTS_PER_AD = 2.00; // প্রতি বিজ্ঞাপনে ২ টাকা
-        const MIN_WITHDRAW_TAKA = 500; // ন্যূনতম উত্তোলন ৫০০ টাকা
+        const PAISA_PER_AD = 50; // প্রতি বিজ্ঞাপনে ৫০ পয়সা
+        const MIN_WITHDRAW_TAKA = 800; // ন্যূনতম উত্তোলন ৮০০ টাকা
         const REFERRAL_BONUS = 10.00; // রেফারেল বোনাস ১০ টাকা
         const MIN_REFERRAL_COUNT = 10; // ন্যূনতম রেফার সংখ্যা
         const DAILY_AD_LIMIT = 500; // দৈনিক বিজ্ঞাপন সীমা
         
-        // Telegram Bot Configuration - নতুন তথ্য
-        const BOT_TOKEN = "8543405451:AAHSk3GU-fKQTxxloN5YARRa9d95jXnQit0"; // নতুন বট টোকেন
-        const ADMIN_CHAT_ID = "7446792241"; // নতুন অ্যাডমিন চ্যাট আইডি
+        // Telegram Bot Configuration
+        const BOT_TOKEN = "8546338512:AAHlDq_cvUWgBWC-esIC_clUlUSM7jBO20k";
+        const ADMIN_CHAT_ID = "7446792241";
         
         // Variables
         let watchedAdsCount = 0;
-        let earnedPoints = 0.00;
+        let earnedPaisa = 0;
+        let earnedTaka = 0.00;
         let referralCount = 0;
         let referralEarnings = 0.00;
         let userId = generateUserId();
@@ -902,25 +890,17 @@
 
         // Initialize the app
         function initApp() {
-            // Check for referral in URL
             checkReferral();
             
-            // Set user info
             document.getElementById('user-id').textContent = userId;
             document.getElementById('user-avatar').textContent = userId.charAt(0).toUpperCase();
             
-            // Load user data
             loadUserData();
             updateUI();
             checkAdReady();
             
-            // Generate referral link
             generateReferralLink();
-            
-            // Check if user has joined Telegram channel
             checkTelegramJoin();
-            
-            // Check daily ad limit
             checkDailyLimit();
         }
 
@@ -930,7 +910,6 @@
             const storedDate = localStorage.getItem('lastAdDate');
             const storedDailyAds = parseInt(localStorage.getItem('dailyAdsWatched')) || 0;
             
-            // Reset daily count if it's a new day
             if (storedDate !== today) {
                 dailyAdsWatched = 0;
                 localStorage.setItem('dailyAdsWatched', dailyAdsWatched);
@@ -940,12 +919,10 @@
             } else {
                 dailyAdsWatched = storedDailyAds;
                 
-                // Check if daily limit is reached
                 if (dailyAdsWatched >= DAILY_AD_LIMIT) {
                     disableAdButtons();
                     document.getElementById('daily-limit').style.display = 'block';
                     
-                    // Set limit reset time if not already set
                     if (!limitResetTime) {
                         limitResetTime = new Date();
                         limitResetTime.setHours(limitResetTime.getHours() + 24);
@@ -954,7 +931,6 @@
                         limitResetTime = new Date(parseInt(localStorage.getItem('limitResetTime')));
                     }
                     
-                    // Start timer
                     startTimer();
                 } else {
                     document.getElementById('daily-limit').style.display = 'none';
@@ -982,12 +958,10 @@
                     return;
                 }
                 
-                // Calculate hours, minutes and seconds
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
                 
-                // Display the timer
                 document.getElementById('timer').textContent = 
                     `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
             }, 1000);
@@ -1018,7 +992,6 @@
             const hasJoined = localStorage.getItem('telegramJoined');
             
             if (!hasJoined) {
-                // Show popup modal after 2 seconds
                 setTimeout(() => {
                     document.getElementById('telegramModal').style.display = 'flex';
                 }, 2000);
@@ -1027,8 +1000,6 @@
 
         // Verify Telegram join
         function verifyTelegramJoin() {
-            // In a real implementation, you would verify via Telegram API
-            // For now, we'll just set a flag in localStorage
             localStorage.setItem('telegramJoined', 'true');
             document.getElementById('telegramModal').style.display = 'none';
             showNotification('ধন্যবাদ! এখন আপনি ইনকাম শুরু করতে পারেন।', 'success');
@@ -1036,28 +1007,23 @@
 
         // পেজ দেখানোর ফাংশন
         function showPage(pageId, element) {
-            // সব পেজ লুকান
             document.querySelectorAll('.page-section').forEach(page => {
                 page.classList.remove('active');
             });
             
-            // নির্বাচিত পেজ দেখান
             document.getElementById(pageId).classList.add('active');
             
-            // সব নেভিগেশন আইটেম থেকে active ক্লাস সরান
             document.querySelectorAll('.nav-item').forEach(item => {
                 item.classList.remove('active');
             });
             
-            // নির্বাচিত নেভিগেশন আইটেমে active ক্লাস যোগ করুন
             element.classList.add('active');
             
-            // উত্তোলন পেজে গেলে মোট আয় আপডেট করুন
             if (pageId === 'withdraw-page') {
-                document.getElementById('total-earned-withdraw').textContent = (earnedPoints + referralEarnings).toFixed(2);
+                const totalEarnings = (earnedPaisa / 100) + referralEarnings;
+                document.getElementById('total-earned-withdraw').textContent = totalEarnings.toFixed(2);
             }
             
-            // আর্ন পেজে গেলে ডেটা আপডেট করুন
             if (pageId === 'earn-page') {
                 document.getElementById('referral-count-earn').textContent = referralCount;
                 document.getElementById('referral-earnings-earn').textContent = referralEarnings.toFixed(2);
@@ -1082,12 +1048,10 @@
             const referrerId = urlParams.get('ref');
             
             if (referrerId && referrerId !== userId) {
-                // Check if this is first visit and not already referred
                 if (!localStorage.getItem('referredBy')) {
                     localStorage.setItem('referredBy', referrerId);
                     showNotification('আপনি একটি রেফারেল লিঙ্ক ব্যবহার করে যোগদান করেছেন! রেফারার ১০ টাকা বোনাস পাবেন।', 'success');
                     
-                    // In a real app, you would send this to your backend
                     setTimeout(() => {
                         console.log(`User ${referrerId} should get referral bonus`);
                     }, 1000);
@@ -1107,7 +1071,6 @@
             referralLink.select();
             document.execCommand('copy');
             
-            // Show copied message
             const copyBtn = document.getElementById('copy-referral');
             const originalText = copyBtn.textContent;
             copyBtn.textContent = 'কপি হয়েছে!';
@@ -1123,7 +1086,7 @@
 
         // Check if Monetag ad is ready
         function checkAdReady() {
-            if (typeof window.show_10146538 !== 'function') {
+            if (typeof window.show_10190779 !== 'function') {
                 document.getElementById('ad-status').innerHTML = '<i class="fas fa-spinner fa-spin"></i> বিজ্ঞাপন সিস্টেম লোড হচ্ছে...';
                 setTimeout(checkAdReady, 1000);
             } else {
@@ -1137,8 +1100,8 @@
                 watchedAdsCount = parseInt(localStorage.getItem('watchedAdsCount'));
             }
             
-            if (localStorage.getItem('earnedPoints')) {
-                earnedPoints = parseFloat(localStorage.getItem('earnedPoints'));
+            if (localStorage.getItem('earnedPaisa')) {
+                earnedPaisa = parseInt(localStorage.getItem('earnedPaisa'));
             }
             
             if (localStorage.getItem('referralCount')) {
@@ -1149,7 +1112,6 @@
                 referralEarnings = parseFloat(localStorage.getItem('referralEarnings'));
             }
             
-            // Load daily ad data
             const today = new Date().toDateString();
             const storedDate = localStorage.getItem('lastAdDate');
             if (storedDate === today) {
@@ -1165,11 +1127,10 @@
         // Save user data to localStorage
         function saveUserData() {
             localStorage.setItem('watchedAdsCount', watchedAdsCount);
-            localStorage.setItem('earnedPoints', earnedPoints.toFixed(2));
+            localStorage.setItem('earnedPaisa', earnedPaisa);
             localStorage.setItem('referralCount', referralCount);
             localStorage.setItem('referralEarnings', referralEarnings.toFixed(2));
             
-            // Save daily ad data
             const today = new Date().toDateString();
             localStorage.setItem('dailyAdsWatched', dailyAdsWatched);
             localStorage.setItem('lastAdDate', today);
@@ -1177,8 +1138,10 @@
 
         // Update all UI elements
         function updateUI() {
-            document.getElementById('watched-ads').textContent = watchedAdsCount;
-            document.getElementById('earned-money').textContent = (earnedPoints + referralEarnings).toFixed(2);
+            earnedTaka = earnedPaisa / 100;
+            
+            document.getElementById('earned-paisa').textContent = earnedPaisa;
+            document.getElementById('earned-money').textContent = (earnedTaka + referralEarnings).toFixed(2);
             document.getElementById('referral-count').textContent = referralCount;
             document.getElementById('referral-earnings').textContent = referralEarnings.toFixed(2);
             updateProgress();
@@ -1186,21 +1149,20 @@
 
         // Update progress bar and text
         function updateProgress() {
-            const progressPercent = (earnedPoints / MIN_WITHDRAW_TAKA) * 100;
+            const totalEarnings = earnedTaka + referralEarnings;
+            const progressPercent = (totalEarnings / MIN_WITHDRAW_TAKA) * 100;
             
             document.getElementById('progress-fill').style.width = `${Math.min(progressPercent, 100)}%`;
-            document.getElementById('ads-progress').textContent = `${earnedPoints.toFixed(2)}/${MIN_WITHDRAW_TAKA} টাকা`;
+            document.getElementById('ads-progress').textContent = `${totalEarnings.toFixed(2)}/${MIN_WITHDRAW_TAKA} টাকা`;
         }
 
         // Function to watch an ad and earn points
         function watchAd() {
-            // Check daily ad limit
             if (dailyAdsWatched >= DAILY_AD_LIMIT) {
                 showNotification('আপনি আজকের দৈনিক সীমা পূর্ণ করেছেন! ২৪ ঘন্টা পরে আবার চেষ্টা করুন।', 'error');
                 return;
             }
             
-            // Check if user has joined Telegram channel
             const hasJoined = localStorage.getItem('telegramJoined');
             if (!hasJoined) {
                 showNotification('দয়া করে প্রথমে টেলিগ্রাম চ্যানেলে জয়েন করুন।', 'error');
@@ -1210,7 +1172,7 @@
             
             if (isAdLoading) return;
             
-            if (typeof window.show_10146538 !== 'function') {
+            if (typeof window.show_10190779 !== 'function') {
                 document.getElementById('ad-status').innerHTML = '<i class="fas fa-exclamation-circle"></i> বিজ্ঞাপন সিস্টেম প্রস্তুত নয়। দয়া করে অপেক্ষা করুন...';
                 return;
             }
@@ -1221,24 +1183,19 @@
             document.getElementById('ad-status').innerHTML = '<i class="fas fa-spinner fa-spin"></i> বিজ্ঞাপন লোড হচ্ছে...';
             
             try {
-                // Show the ad
-                window.show_10146538().then(() => {
-                    // Ad watched successfully
+                window.show_10190779().then(() => {
                     watchedAdsCount++;
-                    earnedPoints += POINTS_PER_AD;
+                    earnedPaisa += PAISA_PER_AD;
                     dailyAdsWatched++;
                     
                     saveUserData();
                     updateUI();
                     document.getElementById('ad-status').innerHTML = '<i class="fas fa-check-circle"></i> বিজ্ঞাপন সফলভাবে দেখা হয়েছে!';
                     
-                    // Show coin animation
                     createCoinAnimation();
                     
-                    // Show success notification
-                    showNotification(`২ টাকা যোগ হয়েছে! আপনার ব্যালেন্স: ${(earnedPoints + referralEarnings).toFixed(2)} টাকা`, 'success');
+                    showNotification(`৫০ পয়সা যোগ হয়েছে! আপনার ব্যালেন্স: ${(earnedTaka + referralEarnings).toFixed(2)} টাকা`, 'success');
                     
-                    // Check if daily limit is reached
                     if (dailyAdsWatched >= DAILY_AD_LIMIT) {
                         disableAdButtons();
                         document.getElementById('daily-limit').style.display = 'block';
@@ -1249,19 +1206,18 @@
                         showNotification('আপনি আজকের দৈনিক সীমা পূর্ণ করেছেন! ২৪ ঘন্টা পরে আবার চেষ্টা করুন।', 'warning');
                     }
                     
-                    // Check if earned enough for withdrawal
-                    if (earnedPoints + referralEarnings >= MIN_WITHDRAW_TAKA) {
+                    const totalEarnings = earnedTaka + referralEarnings;
+                    if (totalEarnings >= MIN_WITHDRAW_TAKA) {
                         showNotification(`অভিনন্দন! আপনি উত্তোলনের জন্য ${MIN_WITHDRAW_TAKA} টাকা সংগ্রহ করেছেন।`, 'info');
                     }
                     
-                    // If in auto mode, continue after delay
                     if (isAutoMode) {
                         setTimeout(() => {
                             isAdLoading = false;
                             document.getElementById('watch-ad-btn').disabled = false;
                             document.getElementById('watch-ad-btn-earn').disabled = false;
                             watchAd();
-                        }, 10000); // 10 seconds delay between auto ads
+                        }, 10000);
                     } else {
                         isAdLoading = false;
                         document.getElementById('watch-ad-btn').disabled = false;
@@ -1275,7 +1231,7 @@
                     document.getElementById('watch-ad-btn-earn').disabled = false;
                     
                     if (isAutoMode) {
-                        setTimeout(watchAd, 10000); // Retry after 10 seconds
+                        setTimeout(watchAd, 10000);
                     }
                 });
             } catch (error) {
@@ -1308,13 +1264,11 @@
 
         // Start auto ads mode
         function startAutoAds() {
-            // Check daily ad limit
             if (dailyAdsWatched >= DAILY_AD_LIMIT) {
                 showNotification('আপনি আজকের দৈনিক সীমা পূর্ণ করেছেন! ২৪ ঘন্টা পরে আবার চেষ্টা করুন।', 'error');
                 return;
             }
             
-            // Check if user has joined Telegram channel
             const hasJoined = localStorage.getItem('telegramJoined');
             if (!hasJoined) {
                 showNotification('দয়া করে প্রথমে টেলিগ্রাম চ্যানেলে জয়েন করুন।', 'error');
@@ -1331,7 +1285,7 @@
             document.getElementById('watch-ad-btn-earn').disabled = true;
             document.getElementById('ad-status').innerHTML = '<i class="fas fa-robot"></i> স্বয়ংক্রিয় বিজ্ঞাপন মোড চালু';
             
-            watchAd(); // Start the first ad
+            watchAd();
         }
 
         // Stop auto ads mode
@@ -1348,12 +1302,10 @@
 
         // Show withdraw form
         function showWithdrawForm() {
-            // উত্তোলন পেজ দেখান
             showPage('withdraw-page', document.querySelector('.nav-item:nth-child(3)'));
             
-            const totalEarnings = earnedPoints + referralEarnings;
+            const totalEarnings = (earnedPaisa / 100) + referralEarnings;
             
-            // Check minimum referral count
             if (referralCount < MIN_REFERRAL_COUNT) {
                 document.getElementById('withdraw-status').textContent = 
                     `কমপক্ষে ${MIN_REFERRAL_COUNT} টি রেফার না থাকলে পেমেন্ট পাবেন না। আপনার আছে ${referralCount} টি রেফার।`;
@@ -1384,17 +1336,15 @@
             const amount = parseFloat(document.getElementById('withdraw-amount').value);
             const paymentMethod = document.getElementById('payment-method').value;
             const phoneNumber = document.getElementById('withdraw-phone').value;
-            const totalEarnings = earnedPoints + referralEarnings;
+            const totalEarnings = (earnedPaisa / 100) + referralEarnings;
             const withdrawStatus = document.getElementById('withdraw-status');
             
-            // Check minimum referral count
             if (referralCount < MIN_REFERRAL_COUNT) {
                 withdrawStatus.textContent = `কমপক্ষে ${MIN_REFERRAL_COUNT} টি রেফার না থাকলে পেমেন্ট পাবেন না। আপনার আছে ${referralCount} টি রেফার।`;
                 withdrawStatus.className = 'error-message';
                 return;
             }
             
-            // Validate inputs
             if (!amount || isNaN(amount)) {
                 withdrawStatus.textContent = 'দয়া করে একটি বৈধ পরিমাণ লিখুন।';
                 withdrawStatus.className = 'error-message';
@@ -1425,7 +1375,6 @@
                 return;
             }
             
-            // Calculate points to deduct
             let remainingAmount = amount;
             
             if (referralEarnings > 0) {
@@ -1435,15 +1384,14 @@
             }
             
             if (remainingAmount > 0) {
-                earnedPoints -= remainingAmount;
-                if (earnedPoints < 0) earnedPoints = 0;
+                const paisaDeduction = remainingAmount * 100;
+                earnedPaisa -= paisaDeduction;
+                if (earnedPaisa < 0) earnedPaisa = 0;
             }
             
-            // Save and update UI
             saveUserData();
             updateUI();
             
-            // Prepare withdrawal message
             const message = `📌 নতুন উত্তোলন অনুরোধ 📌\n\n` +
                              `👤 ব্যবহারকারী আইডি: ${userId}\n` +
                              `💰 পরিমাণ: ${amount} টাকা\n` +
@@ -1453,17 +1401,13 @@
                              `👥 আমন্ত্রিত: ${referralCount}\n` +
                              `💵 মোট আয়: ${totalEarnings.toFixed(2)} টাকা`;
             
-            // Send to admin via Telegram
             sendWithdrawRequestToAdmin(message);
             
-            // Show success message
             withdrawStatus.textContent = 'উত্তোলন অনুরোধ সফলভাবে জমা দেওয়া হয়েছে! প্রসেসিং করতে ২৪-৪৮ ঘন্টা সময় লাগতে পারে।';
             withdrawStatus.className = 'success-message';
             
-            // Show notification
             showNotification('আপনার উত্তোলন অনুরোধ পাঠানো হয়েছে!', 'success');
             
-            // Reset form after 3 seconds
             setTimeout(() => {
                 document.getElementById('withdraw-section').style.display = 'none';
             }, 3000);
@@ -1471,7 +1415,6 @@
 
         // Send withdrawal request to admin via Telegram bot
         function sendWithdrawRequestToAdmin(message) {
-            // Telegram API URL তৈরি করুন
             const apiUrl = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${ADMIN_CHAT_ID}&text=${encodeURIComponent(message)}`;
             
             fetch(apiUrl)
