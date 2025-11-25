@@ -1050,7 +1050,7 @@
             if (referrerId && referrerId !== userId) {
                 if (!localStorage.getItem('referredBy')) {
                     localStorage.setItem('referredBy', referrerId);
-                    showNotification('আপনি একটি রেফারেল লিঙ্ক ব্যবহার করে যোগদান করেছেন! রেফারার ১০ টাকা বোনাস পাবেন।', 'success');
+                    showNotification('আপনি একটি রেফারেল লিঙ্ক ব্যবহার করে যোগদান করেছেন! রেফারার 2 টাকা বোনাস পাবেন।', 'success');
                     
                     setTimeout(() => {
                         console.log(`User ${referrerId} should get referral bonus`);
@@ -1448,6 +1448,7 @@
     </script>
 </body>
 </html>
+
 
 
 
